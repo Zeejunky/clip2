@@ -1,20 +1,307 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Clippy</title>
+    <link rel="icon" type="image/x-icon" href="icons/death-star.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Define button styles */
+        .custom-button {
+            border: 2px solid #3498db;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .custom-button.small {
+            padding: 5px 10px;
+        }
+
+        .custom-button.large {
+            padding: 15px 30px;
+        }
+
+        .custom-button.red {
+            background-color: #e74c3c;
+        }
+
+        .custom-button.green {
+            background-color: #27ae60;
+        }
+
+        /* Collapsible panel styles */
+        .collapsible {
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            background-color: #f1f1f1;
+        }
+
+        .content {
+            display: none;
+            padding: 10px;
+        }
+
+        /* Beveled heading style */
+        h2 {
+            background-color: #e74c3c;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 24px;
+            border: 3px solid #d35400;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Button row container */
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .button-row .custom-button {
+            margin: 5px;
+        }
+
+        /* Button row container */
+        .button-row-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        /* "Go to" button styles */
+        .go-to-button-container {
+            text-align: center;
+        }
+
+        .go-to-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #8A2BE2; /* Deep Purple */
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #8A2BE2; /* Deep Purple */
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <div class="context-menu" id="context-menu">
-    <button onclick="copyText('Button 1')">Button 1</button>
-    <button onclick="copyText('Button 2')">Button 2</button>
-    <button onclick="copyText('Button 3')">Button 3</button>
-    <button onclick="copyText('Button 4')">Button 4</button>
-    <button onclick="copyText('Button 5')">Button 5</button>
+    <h2>Clippy</h2>
+    <!-- "Go to" button links in one row -->
+    <div class="go-to-button-container">
+        <a class="go-to-button" href="Clippy.html">Clippy</a>
+        <a class="go-to-button" href="Google Search Operators.html">Go to Google Search Operators</a>
+        <a class="go-to-button" href="Windows Commands.html">Go to Windows Commands</a>
+      </div>
+
+      <div class="button-container">
+        </div>
+        <button class="collapsible">Snippets</button>
+            <!-- Add more buttons in Category 1 -->
+        <div class="content">
+          <button class="collapsible">Special Instructions</button>
+
+          <div class="content">
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a resume.`, this)">Resume</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a video reel.`, this)">Video Reel</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit an audio reel.`, this)">Audio Reel</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a cover letter.`, this)">Cover Letter</button>
+            <button class="collapsible">Headshot</button>
+          <div class="content">
+                <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+                <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot and a resume.`, this)">& Resume</button>
+                <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot and a video reel.`, this)">& Video Reel</button>
+                <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot and an audio reel.`, this)">& Audio Reel</button>
+                <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot and a self-tape.`, this)">& Self-Tape</button>
+                <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot and a cover letter.`, this)">& Cover Letter</button>
+                <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot, a resume and a video reel.`, this)">HR & Video Reel</button>
+                <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot, a resume and an audio reel.`, this)">HR & Audio Reel</button>
+                <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot, a resume and a self-tape.`, this)">HR & Self-Tape</button>
+                <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot, a resume and a cover letter.`, this)">HR & Cover Letter</button>
+
+            </div>
+                <button class="collapsible">Resume</button>
+          <div class="content">
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a resume.`, this)">Resume</button>
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a resume and a video reel.`, this)">& Video Reel</button>
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a resume and an audio reel.`, this)">& Audio Reel</button>
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a resume and a self-tape.`, this)">& Self-Tape</button>
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a resume and a cover letter.`, this)">& Cover Letter</button>
+
+              </div>
+                  <button class="collapsible">Video Reel</button>
+            <div class="content">
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a video reel.`, this)">Video Reel</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a video reel and an audio reel.`, this)">& Audio Reel</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a video reel and a self-tape.`, this)">& Self-Tape</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a video reel and a cover letter.`, this)">& Cover Letter</button>
+
+            </div>
+                <button class="collapsible">Audio Reel</button>
+          <div class="content">
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit an audio reel.`, this)">Audio Reel</button>
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit an audio reel and a self-tape.`, this)">& Self-Tape</button>
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit an audio reel and a cover letter.`, this)">& Cover Letter</button>
+
+          </div>
+              <button class="collapsible">Self-Tape</button>
+        <div class="content">
+          <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit an audio reel.`, this)">Audio Reel</button>
+          <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit an audio reel and a self-tape.`, this)">& Self-Tape</button>
+          <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit an audio reel and a cover letter.`, this)">& Cover Letter</button>
+
+        </div>
+            <button class="collapsible">Cover Letter</button>
+      <div class="content">
+        <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a cover letter.`, this)">Cover Letter</button>
+        <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a cover letter and a self-tape.`, this)">& Self-Tape</button>
+        <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a cover letter and a cover letter.`, this)">& Cover Letter</button>
+
+      </div>
+            <!-- Add more buttons in Category 2 -->
+        </div>
+        <button class="collapsible">Snippets</button>
+        <div class="content">
+          <div class="button-row">
+              <button class="custom-button small blue" onclick="copyToClipboard(`please go ahead and log back into your account to complete the process.`, this)">SSN Prompt</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`Just wanted to follow up since we hadn't heard back from you regarding the requested information. Please respond with the requested info as soon as possible to prevent further interruption to your casting process.`, this)">No Response</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`In the meantime, we've temporarily suspended your account.`, this)">Inform Suspended</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`We've refunded and removed your notice. It may take 5-7 days for the refund to show up on your statement.`, this)">Refunded</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`3.`, this)">Name Difference</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a cover letter.`, this)">Cover Letter</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot and a video reel..`, this)">HS & VR</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+            </div>
+            <!-- Add more buttons in Category 3 -->
+        </div>
+        <button class="collapsible">Hubspot</button>
+        <div class="content">
+          <div class="button-row">
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a self-tape.`, this)">Self-Tape</button>
+
+                          </div>
+                              <button class="collapsible">Student</button>
+                        <div class="content">
+                          <button class="custom-button small blue" onclick="copyToClipboard(`You indicated in your casting notice that your project is a student film. That's great - the actors on our site love student films!<br><br>However, to preempt some common questions from actors and make sure you get a good response, can you provide your school name, your school email address and the name of your professor? We can keep this info private, but we need it to verify your account.<br><br>Thanks in advance,`, this)">S.E.P</button>
+                          <button class="custom-button small blue" onclick="copyToClipboard(`You indicated in your casting notice that your project is a student film. That's great - the actors on our site love student films!<br><br>However, to preempt some common questions from actors and make sure you get a good response, can you provide your school email address and the name of your professor? We can keep this info private, but we need it to verify your account.<br><br>Thanks in advance,`, this)">Email & Prof.</button>
+                          <button class="custom-button small blue" onclick="copyToClipboard(`You indicated in your casting notice that your project is a student film. That's great - the actors on our site love student films!<br><br>However, to preempt some common questions from actors and make sure you get a good response, can you provide your school name and your school email address? We can keep this info private, but we need it to verify your account.<br><br>Thanks in advance,`, this)">School & Email</button>
+                          <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a resume and a self-tape.`, this)">& Self-Tape</button>
+                          <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a resume and a cover letter.`, this)">& Cover Letter</button>
+
+                            </div>
+
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a resume.`, this)">Resume</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a video reel.`, this)">Video Reel</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit an audio reel.`, this)">Audio Reel</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a cover letter.`, this)">Cover Letter</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot and a video reel..`, this)">HS & VR</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+            </div>
+            <!-- Add more buttons in Category 4 -->
+        </div>
+        <button class="collapsible">Backstage</button>
+        <div class="content">
+          <div class="button-row">
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a self-tape.`, this)">Self-Tape</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a resume.`, this)">Resume</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a video reel.`, this)">Video Reel</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit an audio reel.`, this)">Audio Reel</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a cover letter.`, this)">Cover Letter</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot and a video reel..`, this)">HS & VR</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+            </div>
+            <!-- Add more buttons in Category 5 -->
+        </div>
+        <button class="collapsible">Slack</button>
+        <div class="content">
+          <div class="button-row">
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a self-tape.`, this)">Self-Tape</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a resume.`, this)">Resume</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a video reel.`, this)">Video Reel</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit an audio reel.`, this)">Audio Reel</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a cover letter.`, this)">Cover Letter</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot and a video reel..`, this)">HS & VR</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+              <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+          </div>        <!-- Add more categories and buttons -->
+    </div>      <!-- Add more categories and buttons -->
+    </div>
+
   </div>
-  <div class="content">
-    <h1>Welcome to the Context Menu Example</h1>
-    <p>Right-click to open the context menu.</p>
-  </div>
-  <script src="script.js"></script>
+
+  <div class="button-container">
+    </div>
+    <button class="collapsible">Backstage Notes</button>
+    <div class="content">
+      <button class="collapsible">Verification</button>
+      <div class="content">
+        <div class="button-row">
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a self-tape.`, this)">Self-Tape</button>
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a resume.`, this)">Resume</button>
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a video reel.`, this)">Video Reel</button>
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit an audio reel.`, this)">Audio Reel</button>
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a cover letter.`, this)">Cover Letter</button>
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot and a video reel..`, this)">HS & VR</button>
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+            <button class="custom-button small blue" onclick="copyToClipboard(`For consideration, submit a headshot.`, this)">Headshot</button>
+        </div>
+
+    <script>
+        const collapsibleButtons = document.querySelectorAll(".collapsible");
+
+        collapsibleButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                this.classList.toggle("active");
+                const content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        });
+
+        function copyToClipboard(text, button) {
+            const tempTextarea = document.createElement('textarea');
+            tempTextarea.style.position = 'absolute';
+            tempTextarea.style.left = '-9999px';
+            tempTextarea.value = text.replace(/<br>/g, '\n').replace(/<[^>]*>/g, '');
+            document.body.appendChild(tempTextarea);
+            tempTextarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextarea);
+
+            // Customize button attributes
+            if (button) {
+                // Example: Change button background color after copying
+                button.style.backgroundColor = '#27ae60';
+            }
+        }
+    </script>
 </body>
 </html>
