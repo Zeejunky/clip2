@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Search Generator</title>
+</head>
+<body>
+    <h1>Generate Google Search URL</h1>
+    <form action="https://www.google.com/search" method="get">
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="q" placeholder="Enter Full Name"><br>
+
+        <label for="keyword">Keyword:</label>
+        <input type="text" id="keyword" name="q" placeholder="Enter Keyword"><br>
+
+        <label for="site">LinkedIn Site:</label>
+        <select id="site" name="site">
+            <option value="">Select a LinkedIn Site</option>
+            <option value="site:linkedin.com">LinkedIn (Worldwide)</option>
+            <option value="site:linkedin.com/uk">LinkedIn UK</option>
+            <option value="site:linkedin.com/us">LinkedIn US</option>
+            <option value="site:linkedin.com/ca">LinkedIn Canada</option>
+            <option value="site:linkedin.com/za">LinkedIn South Africa</option>
+        </select><br>
+
+        <input type="submit" value="Generate Google Search">
+    </form>
+</body>
+</html>
